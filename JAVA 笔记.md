@@ -325,10 +325,59 @@ maxStr =( m >n) ? "m大" : ((m == n) ? "相等" : "n小" ) ;
 ![image-20201211101807213](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201211101807213.png)
 
 1. for
+
+   结构
+
+   for（① ; ② ; ④）
+    *   {
+    *       ③
+    *   }
+    *   执行过程： ① -  ②  -  ③  -  ④  -  ②  -   ③ 。。。。-  ②
+
 2. while
+
+    *  ①
+    *  while( ② ){
+    *       ③;
+    *       ④;
+    *  }
+    *  执行过程     ① -  ②  -  ③  -  ④  -  ②  -   ③ 。。。。-  ②
+    *  注意:
+        *   1.必须有迭代条件，否则 死循环
+
 3. do while
 
+    * ①
+    
+    * do{
+    
+    * ③;
+    
+    * ④;
+    
+    * }while( ② );
+    
+    * 执行过程： ① --  ③  ---  ④  ---  ②   。。。。-  ②  
+    
+    * 注意：
+    
+    * 1.至少有一次执行循环体
+    
+    * 2.开发中，使用for、while多一些，do-while使用较少
+    
+4. break  continue 关键字使用
 
+     * 								​                                         范围                                 			作用·								 相同点
+     * break                        switch-case								   结束当前循环					关键字后面语句不执行
+     * 						​                            循环结构 for/while/dowhile
+     * 
+     * continue 			循环结构 for/while/dowhile		     结束当次循环				    关键字后面语句不执行
+
+5. 
+
+
+
+1. 
 
 ### OO
 
@@ -351,3 +400,79 @@ maxStr =( m >n) ? "m大" : ((m == n) ? "相等" : "n小" ) ;
 ### Meta Data
 
 ### Regular Expression
+
+## 知识点
+
+1. 键盘输入 值
+
+   ```
+   //引用 Scanner 组件
+   improt java.util.Scanner;
+   
+   // 实例化 Scanner 对象 
+   Scanner scan = new Scanner(System.in);
+   
+   //使用 nextInt() 方法输入的值必须是整数
+   scan.nextInt();
+   
+   // 关闭scan组件
+   scan.close();
+   
+   ```
+
+   ![image-20201224102521892](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201224102521892.png)
+
+2. 获取时间 Calendar
+
+   `java内置的组件，不需要引用`
+
+   ```
+   //实例化
+   Calendar a = Calendar.getInstance();
+   
+   //例
+   monthVal = scan.nextInt();
+   a.set( 2020,(int)monthVal-1,1 );
+   int allDay = 0;
+   allDay +=a.getActualMaximum(Calendar.DAY_OF_MONTH);
+   System.out.println("一共天数："+ allDay);
+   
+   
+   ```
+
+   ![image-20201224104140124](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201224104140124.png)
+
+3. 计算程序 运行时间
+
+   ```
+   //  获取当前时间距离1970-01-01 00:00:000 的毫秒数
+   
+   	long endTime = System.currentTimeMillis();
+   	System.out.println("结束时间;  "+endTime);
+   	结果：   结束时间;  1608859053893
+   
+   ```
+
+   
+
+4. 12
+
+## 练习项目
+
+### 1.家庭记账软件
+
+- 模拟实现一个基于文本界面的《家庭记账软件》
+- 掌提初步的编程技巧和调试技巧
+- 主要涉及以下知识点·
+
+​          变量的定义
+
+​          基本数据类型的使用
+
+​          循环语句·
+
+​          分支语句
+
+​          方法声明、调用和返回值的接收
+
+​          简单的屏幕输出格式控制
